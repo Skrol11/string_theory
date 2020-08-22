@@ -5,8 +5,19 @@ def is_palindrome(text):
     >>> is_palindrome('Eva, can I see bees in a cave?')
     True
     """
-    pass
+    letters = []
+    for sign in text:
+        if sign.isalpha() == True: #Jeżeli prawdą jest, że...
+            letters.append(sign.lower())
+    text_original = "".join(letters) #zmiana listy na string
+    text_reverse = "".join(reversed(letters))
 
+    # print(text_original) 
+    # print(text_reverse)   
+    return text_original == text_reverse
+
+print(is_palindrome('Mr. Owl ate my metal worm'))
+print(is_palindrome('Eva, can I see bees in a cave?'))
 
 def is_isogram(text):
     """
